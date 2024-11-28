@@ -1,24 +1,21 @@
-const ConsultantCard = ({ consultant }) => (
-    <div>
+const ConsultantCard = ({ consultant }) => {
+  return (
+    <div
+      style={{
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        padding: '16px',
+        marginBottom: '10px',
+        backgroundColor: '#f9f9f9',
+      }}
+    >
       <h3>{consultant.name}</h3>
-      <p>Osaaminen: {consultant.skills.join(', ')}</p>
-      <p>Kokemus: {consultant.experience} vuotta</p>
+      <p><strong>Osaaminen:</strong> {consultant.skills.join(', ')}</p>
+      <p><strong>Kokemus:</strong> {consultant.experience} vuotta</p>
+      <button style={{ marginRight: '10px' }}>Näytä profiili</button>
+      <button>Muokkaa</button>
     </div>
   );
-  
-  const ConsultantsPage = () => {
-    const consultants = [
-      { id: 1, name: 'Kalle Konsultti', skills: ['React', 'Node.js'], experience: 5 },
-      { id: 2, name: 'Liisa Laakso', skills: ['Java', 'Spring'], experience: 8 },
-    ];
-  
-    return (
-      <div>
-        {consultants.map(c => (
-          <ConsultantCard key={c.id} consultant={c} />
-        ))}
-      </div>
-    );
-  };
-  export default ConsultantsPage;
-  
+};
+
+export default ConsultantCard
