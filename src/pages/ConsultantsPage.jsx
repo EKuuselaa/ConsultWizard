@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ConsultantCard from '../components/ConsultantCard';
 import './ConsultantsPage.css';
 
 const ConsultantsPage = () => {
@@ -32,9 +33,11 @@ const ConsultantsPage = () => {
       <ul className="consultant-list">
         {filteredConsultants.map((consultant) => (
           <li key={consultant.id} className="consultant-item">
-            <div className="consultant-name">{consultant.name}</div>
-            <div className="consultant-skills">Skills: {consultant.skills.join(', ')}</div>
-            <div className="consultant-experience">Experience: {consultant.experience} years</div>
+            <ConsultantCard
+              name={consultant.name}
+              skills={consultant.skills}
+              experience={consultant.experience}
+            />
           </li>
         ))}
       </ul>
