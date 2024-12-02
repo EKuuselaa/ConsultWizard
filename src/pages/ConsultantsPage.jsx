@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ConsultantCard from '../components/ConsultantCard';
+import './ConsultantsPage.css';
 
 const ConsultantsPage = () => {
   const [consultants, setConsultants] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Simuloitu data
   useEffect(() => {
     const mockData = [
       { id: 1, name: 'Kalle Konsultti', skills: ['React', 'Node.js'], experience: 5 },
@@ -14,41 +13,31 @@ const ConsultantsPage = () => {
     setConsultants(mockData);
   }, []);
 
-
-  //hakutoiminto konsulteille
-
-  const filteredConsultants = consultants.filter((consultants) =>
-    consultants.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredConsultants = consultants.filter((consultant) =>
+    consultant.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div>
+    <div className="container">
       <h1>Konsultit</h1>
-
-      {/* Hakukenttä */}
-      <div style={{ marginBottom: '20px' }}>
+      <div className="search-container">
         <input
           type="text"
           placeholder="Hae konsulttia nimellä..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: '10px',
-            width: '300px',
-            marginRight: '10px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-          }}
         />
-        <button style={{ padding: '10px 20px' }}>Lisää konsultti</button>
+        <button>Lisää konsultti</button>
       </div>
-
-      {/* Konsulttilista kortteina */}
-      <div>
+      <ul className="consultant-list">
         {filteredConsultants.map((consultant) => (
-          <ConsultantCard key={consultant.id} consultant={consultant} />
+          <li key={consultant.id} className="consultant-item">
+            <div className="consultant-name">{consultant.name}</div>
+            <div className="consultant-skills">Skills: {consultant.skills.join(', ')}</div>
+            <div className="consultant-experience">Experience: {consultant.experience} years</div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
