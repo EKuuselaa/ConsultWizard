@@ -1,46 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import ConsultantCard from '../components/ConsultantCard';
 import './ConsultantsPage.css';
+import SearchBar from '../components/ui/searchbar';
+import Table from '../components/ui/Table';
 
 const ConsultantsPage = () => {
-  const [consultants, setConsultants] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [consultants, setConsultants] = useState([
+    { name: 'Kalle Konsultti', skills: 'React, Node.js' },
+    { name: 'Liisa Laakso', skills: 'Java, Spring' },
+  ]);
 
-  useEffect(() => {
-    const mockData = [
-      { id: 1, name: 'Kalle Konsultti', skills: ['React', 'Node.js'], experience: 5 },
-      { id: 2, name: 'Liisa Laakso', skills: ['Java', 'Spring'], experience: 8 },
-    ];
-    setConsultants(mockData);
-  }, []);
-
-  const filteredConsultants = consultants.filter((consultant) =>
-    consultant.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredConsultants = consultants.filter((c) =>
+    c.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const columns = ['name', 'skills'];
+
   return (
-    <div className="container">
-      <h1>Konsultit</h1>
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Hae konsulttia nimellä..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button>Lisää konsultti</button>
-      </div>
-      <ul className="consultant-list">
-        {filteredConsultants.map((consultant) => (
-          <li key={consultant.id} className="consultant-item">
-            <ConsultantCard
-              name={consultant.name}
-              skills={consultant.skills}
-              experience={consultant.experience}
-            />
-          </li>
-        ))}
-      </ul>
+    <div>
+      <h1>Konsulttien Hallinta</h1>
+      <SearchBar
+        placeholder="Hae konsulttia..."
+        value={searchTerm}
+        onChange={setSearchTerm}
+      />
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <Table columns={columns} data={filteredConsultants} />
+      )}
     </div>
   );
 };
