@@ -1,0 +1,33 @@
+.profile-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 16px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+  .profile-card__name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .profile-card__skills {
+    margin-bottom: 16px;
+  }
+  
+  .profile-card__bio {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  
+  .profile-card__contact {
+    margin-top: 16px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
