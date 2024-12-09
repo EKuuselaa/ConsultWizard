@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ConsultantsPage.css';
-import SearchBar from '../components/ui/SearchBar';
+import SearchBar from '../components/ui/searchbar';
 import Table from '../components/ui/Table';
 import ConsultantCard from '../components/cards/ConsultantCard';
 import ProfileCard from '../components/cards/ProfileCard';
