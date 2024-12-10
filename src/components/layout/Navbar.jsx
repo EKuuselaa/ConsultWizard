@@ -1,14 +1,29 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-    return (
-      <nav style={{ padding: '10px', background: '#f4f4f4', marginBottom: '20px' }}>
-        <Link to="/" style={{ marginRight: '10px' }}>Etusivu</Link>
-        <Link to="/consultants" style={{ marginRight: '10px' }}>Konsultit</Link>
-        <Link to="/admin">Hallinta</Link>
-      </nav>
-    );
-  };
+  return (
+    <nav className="navbar">
+      <ul>
+        <li>
+          <NavLink to="/consultants" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Konsulttien Hallinta
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/teams" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Tiimien Hallinta
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/admin" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Käyttäjähallinta
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-  export default Navbar;
+export default Navbar;

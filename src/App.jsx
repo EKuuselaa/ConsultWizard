@@ -8,6 +8,7 @@ import './App.css';
 import HomePage from './pages/HomePage/';
 import ConsultantsPage from './pages/ConsultantsPage';
 import UserManagementPage from './pages/UserManagementPage';
+import TeamManagementPage from './pages/TeamManagementPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/consultants" element={<ConsultantsPage />} />
           <Route path="/admin" element={<UserManagementPage />} />
+          <Route path='/teams' element={<TeamManagementPage />} />
         </Routes>
       </main>
 

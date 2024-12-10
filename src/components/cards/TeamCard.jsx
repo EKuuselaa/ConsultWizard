@@ -1,13 +1,21 @@
 import React from 'react';
 import './TeamCard.css';
 
-const TeamCard = ({ teamName, members, project, onViewTeam }) => {
+const TeamCard = ({ teamName, description, members, onEdit, onDelete }) => {
   return (
     <div className="team-card">
-      <div className="team-card__title">{teamName}</div>
-      <div className="team-card__details">Jäseniä: {members}</div>
-      <div className="team-card__details">Projekti: {project}</div>
-      <button className="team-card__button" onClick={onViewTeam}>Näytä tiimi</button>
+      <h3>{teamName}</h3>
+      <p>{description}</p>
+      <h4>Jäsenet:</h4>
+      <ul>
+        {members.map((member) => (
+          <li key={member.id}>{member.name}</li>
+        ))}
+      </ul>
+      <div className="team-card-actions">
+        <button onClick={onEdit}>Muokkaa</button>
+        <button onClick={onDelete}>Poista</button>
+      </div>
     </div>
   );
 };
