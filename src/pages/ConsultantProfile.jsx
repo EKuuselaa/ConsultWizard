@@ -1,7 +1,7 @@
 import React from 'react';
 import './ConsultantProfile.css';
 
-const ConsultantProfile = ({ consultant, onClose }) => {
+const ProfileCard = ({ consultant, onClose }) => {
   if (!consultant) {
     return <p>Konsultin tietoja ei ole saatavilla.</p>;
   }
@@ -18,4 +18,4 @@ const ConsultantProfile = ({ consultant, onClose }) => {
   );
 };
 
-export default ConsultantProfile;
+export default ProfileCard;

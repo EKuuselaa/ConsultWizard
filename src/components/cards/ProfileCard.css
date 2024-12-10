@@ -1,33 +1,44 @@
 .profile-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 24px;
-    margin: 16px auto;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-  }
-  
-  .profile-card__name {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-  
-  .profile-card__skills {
-    margin-bottom: 16px;
-  }
-  
-  .profile-card__bio {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 16px;
-  }
-  
-  .profile-card__contact {
-    margin-top: 16px;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-  }
-  
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content {
+  margin-bottom: 20px;
+}
+
+.profile-content h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.profile-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.profile-actions {
+  text-align: center;
+}
+
+.print-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+  background-color: #2980b9;
+}
+
