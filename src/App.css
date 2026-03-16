@@ -3,13 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #f4f4f9;
-  font-family: Arial, sans-serif;
+  background-color: transparent;
 }
 
 .header {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--primary-fg);
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -21,21 +20,33 @@
 }
 
 .main-content {
-  background-color: #fff;
+  background-color: var(--surface);
+  color: var(--fg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .footer {
   margin-top: 2rem;
   padding: 1rem;
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--primary-fg);
   border-radius: 8px;
 }
 
 .footer p {
   margin: 0;
   font-size: 1rem;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }

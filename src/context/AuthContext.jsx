@@ -6,7 +6,6 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Admin kirjautumistila
 
   const login = (username, password) => {
-    // Vain kovakoodattu "admin"-käyttäjä ja -salasana
     if (username === 'admin' && password === 'password123') {
       setIsAuthenticated(true);
       return true;

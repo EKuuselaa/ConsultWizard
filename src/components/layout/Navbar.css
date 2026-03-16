@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #2c3e50;
+    background-color: var(--nav-bg);
     padding: 10px 20px;
     display: flex;
     justify-content: space-around;
@@ -19,17 +19,35 @@
   
   .navbar a {
     text-decoration: none;
-    color: white;
+    color: var(--nav-fg);
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
   .navbar a.active {
-    background-color: #3498db;
+    background-color: var(--nav-active-bg);
   }
   
   .navbar a:hover {
-    background-color: #2980b9;
+    background-color: var(--nav-hover-bg);
   }
-  
+
+  .navbar__theme {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__themeButton {
+    background: transparent;
+    color: var(--nav-fg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+
+  .navbar__themeButton:hover {
+    background-color: color-mix(in srgb, var(--nav-fg) 12%, transparent);
+  }

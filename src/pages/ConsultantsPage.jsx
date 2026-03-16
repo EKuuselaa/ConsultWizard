@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './ConsultantsPage.css';
-import SearchBar from '../components/ui/searchbar';
+import SearchBar from '../components/ui/SearchBar';
 import Table from '../components/ui/Table';
 import ConsultantCard from '../components/cards/ConsultantCard';
 import ProfileCard from '../components/cards/ProfileCard';
+import Spinner from '../components/ui/spinner';
 
 const ConsultantsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -119,8 +120,7 @@ const ConsultantsPage = () => {
                 skills={consultant.skills}
                 experience={consultant.experience}
                 onViewProfile={() => handleViewProfile(consultant.id)}
-                onEdit={() => handleEditConsultant(consultant.id)} // Edit-painike
-                onDelete={() => handleDeleteConsultant(consultant.id)} // Delete-painike
+                onEdit={() => handleEditConsultant(consultant.id)}
               />
             ))}
           </div>

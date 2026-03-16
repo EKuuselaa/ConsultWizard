@@ -1,11 +1,12 @@
 .profile-card {
   padding: 20px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--surface);
+  color: var(--fg);
   max-width: 400px;
   margin: 0 auto;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .profile-content {
@@ -14,7 +15,7 @@
 
 .profile-content h2 {
   font-size: 1.8rem;
-  color: #34495e;
+  color: var(--fg);
   margin-bottom: 10px;
 }
 
@@ -30,8 +31,8 @@
 .print-button {
   padding: 10px 15px;
   font-size: 1rem;
-  color: white;
-  background-color: #3498db;
+  color: var(--primary-fg);
+  background-color: var(--primary);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -39,6 +40,6 @@
 }
 
 .print-button:hover {
-  background-color: #2980b9;
+  background-color: var(--primary-hover);
 }
 
