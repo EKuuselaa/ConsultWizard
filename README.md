@@ -2,19 +2,15 @@
 
 A React + Vite single-page app for managing consultants and teams (Finnish-language UI). It's a front-end-only demo/prototype: all data (consultants, teams, login state) lives in React component state and resets on page reload — there is no backend or database yet.
 
+<img width="1344" height="1237" alt="Screenshot 2026-07-14 at 11-59-16 Vite React" src="https://github.com/user-attachments/assets/629c9998-5a45-49f5-b811-652f8d7ff8a0" />
+
+
 ## Tech stack
 
 - [React 18](https://react.dev/) with [React Router 7](https://reactrouter.com/)
 - [Vite 5](https://vitejs.dev/) for dev server and builds
 - [html2canvas](https://github.com/niklasvh/html2canvas) + [jsPDF](https://github.com/parallax/jsPDF) for exporting consultant profiles as PDF
 - ESLint 9 (flat config) for linting
-
-
-<img width="1344" height="1237" alt="Screenshot 2026-07-14 at 11-59-16 Vite React" src="https://github.com/user-attachments/assets/629c9998-5a45-49f5-b811-652f8d7ff8a0" />
-
-
-
-
 
 
 ## Getting started
