@@ -9,6 +9,14 @@ A React + Vite single-page app for managing consultants and teams (Finnish-langu
 - [html2canvas](https://github.com/niklasvh/html2canvas) + [jsPDF](https://github.com/parallax/jsPDF) for exporting consultant profiles as PDF
 - ESLint 9 (flat config) for linting
 
+
+<img width="1344" height="1237" alt="Screenshot 2026-07-14 at 11-59-16 Vite React" src="https://github.com/user-attachments/assets/629c9998-5a45-49f5-b811-652f8d7ff8a0" />
+
+
+
+
+
+
 ## Getting started
 
 ```bash
