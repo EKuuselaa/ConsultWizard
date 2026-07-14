@@ -1,4 +1,3 @@
-import React from 'react';
 import './ConsultantProfile.css';
 
 const ProfileCard = ({ consultant, onClose }) => {

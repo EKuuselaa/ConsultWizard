@@ -1,7 +1,6 @@
-import React from 'react';
 import './ConsultantCard.css';
 
-const ConsultantCard = ({ name, skills, experience, onViewProfile, onEdit }) => {
+const ConsultantCard = ({ name, skills, experience, onViewProfile, onEdit, onDelete }) => {
   return (
     <div className="consultant-card">
       <div className="consultant-card__title">{name}</div>
@@ -10,6 +9,9 @@ const ConsultantCard = ({ name, skills, experience, onViewProfile, onEdit }) => 
       <button className="consultant-card__button" onClick={onViewProfile}>Näytä profiili</button>
       <button className="consultant-card__button consultant-card__button--edit" onClick={onEdit}>
         Muokkaa
+      </button>
+      <button className="consultant-card__button consultant-card__button--delete" onClick={onDelete}>
+        Poista
       </button>
     </div>
   );

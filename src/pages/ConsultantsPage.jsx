@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ConsultantsPage.css';
 import SearchBar from '../components/ui/SearchBar';
-import Table from '../components/ui/Table';
 import ConsultantCard from '../components/cards/ConsultantCard';
 import ProfileCard from '../components/cards/ProfileCard';
 import Spinner from '../components/ui/spinner';
 
 const ConsultantsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
   const [consultants, setConsultants] = useState([
     { id: 1, name: 'Kalle Konsultti', skills: 'React, Node.js', bio: 'Kokenut React-kehittäjä', contactInfo: 'kalle@example.com', experience: 5 },
     { id: 2, name: 'Liisa Laakso', skills: 'Java, Spring', bio: 'Spring-asiantuntija ja ohjelmistokehittäjä', contactInfo: 'liisa@example.com', experience: 3 },
@@ -121,6 +120,7 @@ const ConsultantsPage = () => {
                 experience={consultant.experience}
                 onViewProfile={() => handleViewProfile(consultant.id)}
                 onEdit={() => handleEditConsultant(consultant.id)}
+                onDelete={() => handleDeleteConsultant(consultant.id)}
               />
             ))}
           </div>

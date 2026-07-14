@@ -1,4 +1,3 @@
-import React from 'react';
 import './TeamCard.css';
 
 const TeamCard = ({ teamName, description, members, onEdit, onDelete }) => {

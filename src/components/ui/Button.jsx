@@ -1,4 +1,3 @@
-import React from 'react';
 const Button = ({ text, onClick, type = 'button', variant = 'primary', disabled = false }) => {
   const buttonStyles = {
     primary: {
